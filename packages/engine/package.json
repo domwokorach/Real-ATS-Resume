@@ -1,0 +1,76 @@
+{
+	"name": "@domwokorach/ats-engine",
+	"version": "0.1.0",
+	"description": "ATS resume scoring engine — parser, NLP, and multi-platform scorer used by Real ATS Resume",
+	"type": "module",
+	"main": "./dist/index.js",
+	"types": "./dist/index.d.ts",
+	"exports": {
+		".": {
+			"import": "./dist/index.js",
+			"types": "./dist/index.d.ts"
+		},
+		"./parser": {
+			"import": "./dist/parser/index.js",
+			"types": "./dist/parser/index.d.ts"
+		},
+		"./nlp": {
+			"import": "./dist/nlp/index.js",
+			"types": "./dist/nlp/index.d.ts"
+		},
+		"./scorer": {
+			"import": "./dist/scorer/index.js",
+			"types": "./dist/scorer/index.d.ts"
+		},
+		"./job-parser": {
+			"import": "./dist/job-parser/index.js",
+			"types": "./dist/job-parser/index.d.ts"
+		}
+	},
+	"files": [
+		"dist"
+	],
+	"scripts": {
+		"build": "tsc -p tsconfig.json",
+		"dev": "tsc -p tsconfig.json --watch",
+		"clean": "rm -rf dist"
+	},
+	"keywords": [
+		"ats",
+		"resume",
+		"screening",
+		"nlp",
+		"parser",
+		"scoring",
+		"workday",
+		"taleo",
+		"icims",
+		"greenhouse",
+		"lever",
+		"successfactors"
+	],
+	"license": "MIT",
+	"author": "dominic wokorach-o",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/domwokorach/Real-ATS-Resume.git",
+		"directory": "packages/engine"
+	},
+	"homepage": "https://github.com/domwokorach/Real-ATS-Resume#readme",
+	"bugs": {
+		"url": "https://github.com/domwokorach/Real-ATS-Resume/issues"
+	},
+	"publishConfig": {
+		"registry": "https://npm.pkg.github.com"
+	},
+	"peerDependencies": {
+		"compromise": ">=14.0.0",
+		"mammoth": ">=1.0.0",
+		"pdfjs-dist": ">=4.0.0"
+	},
+	"peerDependenciesMeta": {
+		"compromise": { "optional": true },
+		"mammoth": { "optional": true },
+		"pdfjs-dist": { "optional": true }
+	}
+}

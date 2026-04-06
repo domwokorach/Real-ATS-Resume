@@ -1,0 +1,74 @@
+name: publish-package
+
+on:
+  release:
+    types: [published]
+
+permissions:
+  contents: read
+  packages: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          registry-url: 'https://npm.pkg.github.com'
+          scope: '@domwokorach'
+
+      - name: install root dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: copy engine source into package
+        run: |
+          mkdir -p packages/engine/src
+          cp -r src/lib/engine/nlp      packages/engine/src/nlp
+          cp -r src/lib/engine/scorer   packages/engine/src/scorer
+          cp -r src/lib/engine/parser   packages/engine/src/parser
+          cp -r src/lib/engine/job-parser packages/engine/src/job-parser
+
+      - name: rewrite SvelteKit path aliases to relative paths
+        run: |
+          # $engine/nlp/* → ../nlp/* (from scorer/ or job-parser/)
+          find packages/engine/src -name '*.ts' | xargs sed -i \
+            "s|from '\\\$engine/nlp/|from '../nlp/|g" 
+          find packages/engine/src -name '*.ts' | xargs sed -i \
+            "s|from '\\\$engine/scorer/|from '../scorer/|g"
+
+      - name: remove SvelteKit-only files (report.ts uses \$stores)
+        run: |
+          rm -f packages/engine/src/scorer/report.ts
+          rm -rf packages/engine/src/llm
+
+      - name: install package dependencies
+        run: |
+          cd packages/engine
+          pnpm install --no-frozen-lockfile
+
+      - name: build package
+        run: |
+          cd packages/engine
+          pnpm build
+
+      - name: update package version to match release tag
+        run: |
+          cd packages/engine
+          TAG=${{ github.ref_name }}
+          VERSION=${TAG#v}
+          pnpm pkg set version="$VERSION"
+
+      - name: publish to GitHub Packages
+        run: |
+          cd packages/engine
+          pnpm publish --no-git-checks --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
