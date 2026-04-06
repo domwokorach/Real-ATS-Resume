@@ -13,8 +13,8 @@ Thanks for wanting to contribute to ATS Screener. Here's everything you need to 
 
 ```bash
 # Clone the repo
-git clone https://github.com/sunnypatell/ats-screener.git
-cd ats-screener
+git clone https://github.com/domwokorach/Real-ATS-Resume.git
+cd real-ats-resume
 
 # Install dependencies
 pnpm install
