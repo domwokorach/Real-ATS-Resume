@@ -33,7 +33,7 @@
 				Scan Your Resume Free
 			</a>
 			<a
-				href="https://github.com/sunnypatell/ats-screener"
+				href="https://github.com/domwokorach/Real-ATS-Resume"
 				target="_blank"
 				rel="noopener"
 				class="cta-secondary"
