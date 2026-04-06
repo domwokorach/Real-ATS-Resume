@@ -39,11 +39,6 @@ The thing is, real ATS platforms don't all evaluate resumes the same way. Taleo 
 
 So I built ATS Screener to give students and job seekers what those paid tools won't: **6 honest scores from 6 real platforms**, completely free, completely open source. No paywall, no upsell, no "premium tier" hiding your results. Create a free account and start scanning. Your resume file is parsed entirely in your browser and never uploaded to any server.
 
-> Built by [Sunny Patel](https://sunnypatel.net), a student who got tired of paying for meaningless ATS scores.
-
-> [!CAUTION]
-> This is a independent research project and is **not intended to defame, misrepresent, or make claims about any ATS platform or vendor**. All scoring simulations are approximations based on publicly available documentation, community reports, and general industry knowledge. They do not reflect the actual proprietary algorithms of any platform. ATS Screener is not affiliated with or endorsed by Workday, Oracle (Taleo), iCIMS, Greenhouse, Lever, SAP (SuccessFactors), or any other ATS vendor. The goal is to help students and job seekers get a general sense of how their resume might perform across different types of resume screening approaches used by leading HCM providers.
-
 ## How It Works
 
 ```
@@ -161,5 +156,4 @@ See [SECURITY.md](SECURITY.md) for vulnerability reporting. Resume files are par
 
 ## License
 
-[MIT](LICENSE) - [Sunny Patel](https://sunnypatel.net)
-# Real-ATS-Resume
+[MIT](LICENSE)
