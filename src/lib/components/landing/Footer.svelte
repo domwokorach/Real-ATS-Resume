@@ -14,7 +14,7 @@
 				</p>
 				<div class="social-links">
 					<a
-						href="https://github.com/sunnypatell/ats-screener"
+						href="https://github.com/domwokorach/Real-ATS-Resume"
 						target="_blank"
 						rel="noopener"
 						class="social-link"
@@ -40,7 +40,7 @@
 						</svg>
 					</a>
 					<a
-						href="https://sunnypatel.net"
+						href="https://real-ats-resume.vercel.app/"
 						target="_blank"
 						rel="noopener"
 						class="social-link"
@@ -117,7 +117,7 @@
 				<a href="/scanner" class="footer-link">Resume Scanner</a>
 				<a href="#features" class="footer-link">Features</a>
 				<a
-					href="https://github.com/sunnypatell/ats-screener"
+					href="https://github.com/domwokorach/Real-ATS-Resume"
 					target="_blank"
 					rel="noopener"
 					class="footer-link">Source Code</a
@@ -129,13 +129,13 @@
 				<h4 class="col-title">Resources</h4>
 				<a href="/docs" class="footer-link">Documentation</a>
 				<a
-					href="https://github.com/sunnypatell/ats-screener/issues"
+					href="https://github.com/domwokorach/Real-ATS-Resume/issues"
 					target="_blank"
 					rel="noopener"
 					class="footer-link">Report a Bug</a
 				>
 				<a
-					href="https://github.com/sunnypatell/ats-screener/blob/main/CONTRIBUTING.md"
+					href="https://github.com/domwokorach/Real-ATS-Resume/blob/master/CONTRIBUTING.md"
 					target="_blank"
 					rel="noopener"
 					class="footer-link">Contributing</a
@@ -146,13 +146,13 @@
 			<div class="footer-col">
 				<h4 class="col-title">Legal</h4>
 				<a
-					href="https://github.com/sunnypatell/ats-screener/blob/main/LICENSE"
+					href="https://github.com/domwokorach/Real-ATS-Resume/blob/master/LICENSE"
 					target="_blank"
 					rel="noopener"
 					class="footer-link">MIT License</a
 				>
 				<a
-					href="https://github.com/sunnypatell/ats-screener/blob/main/SECURITY.md"
+					href="https://github.com/domwokorach/Real-ATS-Resume/blob/master/SECURITY.md"
 					target="_blank"
 					rel="noopener"
 					class="footer-link">Security</a
@@ -175,7 +175,7 @@
 		<!-- bottom bar -->
 		<div class="footer-bottom">
 			<p class="copyright">
-				&copy; {new Date().getFullYear()} Sunny Patel. Open source under MIT License.
+				&copy; {new Date().getFullYear()} Wokorach. Open source under MIT License.
 			</p>
 			<p class="tech-stack">Built with SvelteKit 5, TypeScript, and open source.</p>
 		</div>
