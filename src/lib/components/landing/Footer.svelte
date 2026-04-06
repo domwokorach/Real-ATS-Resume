@@ -87,7 +87,7 @@
 						Coffee
 					</a>
 					<a
-						href="https://github.com/sponsors/sunnypatell"
+						href="https://github.com/sponsors/domwokorach"
 						target="_blank"
 						rel="noopener"
 						class="footer-pill sponsor-pill"
