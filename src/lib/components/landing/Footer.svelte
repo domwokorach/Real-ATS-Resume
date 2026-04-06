@@ -40,7 +40,7 @@
 						</svg>
 					</a>
 					<a
-						href="https://real-ats-resume.vercel.app/"
+						href="https://portfolio-wokorach.vercel.app/"
 						target="_blank"
 						rel="noopener"
 						class="social-link"
